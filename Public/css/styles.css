@@ -1,0 +1,373 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DDE6F0; /* Pastel Blue */
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #A7C7E7; /* Soft pastel blue */
+    padding: 20px;
+    font-size: 24px;
+}
+
+h1, h2 {
+    color: #3E5C76;
+}
+
+.destinations {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.destination {
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.destination img {
+    width: 100%;  /* Ensures images fit their containers */
+    max-width: 200px;  /* Adjust this if needed */
+    height: auto;  /* Maintains aspect ratio */
+    border-radius: 10px;  /* Keeps rounded edges */
+    object-fit: contain;  /* Ensures full images are visible */
+    display: block;
+}
+
+
+a {
+    color: #3E5C76;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dinner {
+    background-color: #F8F9FA;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dinner h2 {
+    color: #3E5C76;
+    text-align: center;
+}
+
+.dinner ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.dinner li {
+    margin-bottom: 10px;
+}
+
+.dinner p {
+    text-align: justify;
+    line-height: 1.6;
+}
+.destination-image {
+    width: 50%; /* Adjust to 40% or 35% if needed */
+    max-width: 500px; /* Ensures image is not too large */
+    height: auto; /* Keeps the correct aspect ratio */
+    display: block;
+    margin: 20px auto; /* Centers the image */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    object-fit: cover; /* Ensures the image looks good */
+}
+
+.content-places {
+    background-color: #F0F8FF; /* Light pastel blue background */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-places h2 {
+    color: #3E5C76;
+    text-align: center;
+}
+
+.content-places ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.content-places li {
+    margin-bottom: 10px;
+}
+
+.content-places p {
+    text-align: justify;
+    line-height: 1.6;
+}
+.back-home {
+    text-align: center;
+    margin-top: 30px; /* Push it below other content */
+    padding-bottom: 20px; /* Space before footer */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3E5C76;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2C4856;
+}
+/* === Gallery Styling === */
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between images */
+    flex-wrap: wrap;
+    max-width: 80%; /* Prevents the gallery from stretching too wide */
+    margin: auto;
+}
+
+.gallery-container img {
+    width: 200px;  /* Increased size */
+    height: 150px;  /* Adjusted proportionally */
+    object-fit: cover;  /* Ensures images don't stretch */
+    border-radius: 10px;  /* Optional: Adds rounded corners */
+    transition: transform 0.3s ease-in-out;
+}
+/* === Slideshow Styling === */
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 350px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.prev {
+    left: 5px;
+}
+
+.next {
+    right: 5px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* === Services Section Styling === */
+.services {
+    background-color: #F0F8FF; /* Light pastel blue background */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services h2 {
+    color: #3E5C76;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+/* === Background Colors for Each Destination === */
+.paris-bg {
+    background-color: #FAF3E0; /* Light Beige for Paris */
+}
+
+.tokyo-bg {
+    background-color: #8193a2; /* Light Blue for Tokyo */
+}
+
+.rome-bg {
+    background-color: #FFE4E1; /* Soft Pink for Rome */
+}
+
+.newyork-bg {
+    background-color: #593ef7; /* Light Grey for New York */
+}
+/* === Favorite Places Section Styling === */
+.favorite-places {
+    background-color: #F8F1E4; /* Soft neutral background */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.favorite-places h2 {
+    font-family: "Playfair Display", serif; /* Classy font */
+    font-size: 28px;
+    font-weight: bold;
+    color: #3E5C76;
+}
+
+.favorite-places ul {
+    list-style: none;
+    padding: 0;
+    font-family: "Lora", serif; /* Elegant and readable */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.favorite-places li {
+    margin: 8px 0;
+}
+/* === Search Bar Styling === */
+.search-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #3E5C76;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* === Contact Section Styling === */
+.contact {
+    background-color: #F8F1E4;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #3E5C76;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #3E5C76;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3E5C76;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact button:hover {
+    background-color: #2C4856;
+}
+/* === Navigation Bar Styling === */
+nav {
+    background-color: #3E5C76;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* === Why Travel With Desi Section === */
+.why-travel {
+    background-color: #FFFFFF; /* Changed to white */
+    padding: 30px;
+    margin: 40px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.why-travel h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #3E5C76;
+}
+
+.why-travel p {
+    font-family: "Lora", serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}

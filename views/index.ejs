@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveling with Desi!</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="#contact">Contact</a> <!-- Scrolls down to Contact section -->
+    </nav>
+    <header>
+        <!-- Search Bar -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search destinations..." onkeyup="searchDestinations()">
+</div>
+        <h1>Traveling with Desi !</h1>
+    </header>
+    <main>
+        <!-- Favorite Places Section -->
+<section class="favorite-places">
+    <h2>My Favorite Places I've Been</h2>
+    <ul>
+        <li>Cape Cod</li>
+        <li>Miami</li>
+        <li>Los Angeles</li>
+        <li>Amsterdam</li>
+        <li>Mexico</li>
+    </ul>
+</section>
+        <h2>Explore Destinations</h2>
+        <div class="destinations">
+            <% destinations.forEach(destination => { %>
+                <div class="destination">
+                    <img src="/images/<%= destination.image %>" alt="<%= destination.name %>">
+                    <h3><a href="/destination/<%= destination.name %>"><%= destination.name %></a></h3>
+                    <p><%= destination.description %></p>
+                </div>
+            <% }) %>
+        </div>
+        <!-- Why Travel With Desi? Section -->
+<section class="why-travel">
+    <h2>Why Travel With Desi?</h2>
+    <p>As a well-traveled Marine, I’ve had the opportunity to explore places that most people only dream of.  
+       My experiences have taken me from hidden gems to world-famous landmarks, giving me a unique perspective  
+       on travel. Whether you're looking for adventure, relaxation, or cultural immersion,  
+       I can guide you to once-in-a-lifetime experiences that you'll never forget.</p>
+</section>
+        <!-- Contact Section -->
+<section class="contact">
+    <h2>Contact Me</h2>
+    <p>Have questions or need travel recommendations? Feel free to reach out!</p>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+</section>
+    </main>
+    <script src="/js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= destination.name %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="<%= destination.name.toLowerCase()%>-bg">
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#contact">Contact</a> <!-- Fix: Added /#contact to redirect to home -->
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to <%= destination.name %></h1>
+        <img src="/images/<%= destination.image %>" alt="<%= destination.name %>" class="destination-image">
+        <p><%= destination.description %></p>
+    
+        <!-- Best Places for Dinner Section -->
+        <section class="dinner">
+            <h2>Best Places for Dinner in <%= destination.name %></h2>
+            <ul>
+                <% if (destination.name === "Paris") { %>
+                    <li><strong>Le Meurice</strong> - A luxurious Michelin-star restaurant with elegant French cuisine.</li>
+                    <li><strong>Septime</strong> - A trendy spot offering a creative take on Parisian dishes.</li>
+                    <li><strong>L'Ambroisie</strong> - An exclusive dining experience with classic French flavors.</li>
+                <% } else if (destination.name === "Tokyo") { %>
+                    <li><strong>Tsuta</strong> - The first Michelin-starred ramen shop.</li>
+                    <li><strong>Ginza Kojyu</strong> - A fine dining kaiseki experience.</li>
+                    <li><strong>Sukiyabashi Jiro</strong> - A world-renowned sushi restaurant.</li>
+                <% } else if (destination.name === "Rome") { %>
+                    <li><strong>Roscioli</strong> - Famous for its classic Roman pasta dishes.</li>
+                    <li><strong>La Pergola</strong> - A Michelin-starred restaurant with stunning views.</li>
+                    <li><strong>Armando al Pantheon</strong> - An intimate trattoria near the Pantheon.</li>
+                <% } else if (destination.name === "New York") { %>
+                    <li><strong>Peter Luger Steakhouse</strong> - Iconic Brooklyn steakhouse.</li>
+                    <li><strong>Le Bernardin</strong> - A high-end seafood restaurant.</li>
+                    <li><strong>Katz’s Delicatessen</strong> - A legendary spot for pastrami sandwiches.</li>
+                <% } %>
+            </ul>
+        </section>
+    
+        <!-- Best Places to Make Content Section -->
+        <section class="content-places">
+            <h2>Best Places to Make Content in <%= destination.name %></h2>
+            <ul>
+                <% if (destination.name === "Paris") { %>
+                    <li><strong>TeamLab Borderless</strong> - A digital art museum with stunning visuals.</li>
+                    <li><strong>Montmartre</strong> - A historic district full of charming cafes.</li>
+                    <li><strong>Seine River</strong> - A beautiful spot for Parisian cityscapes.</li>
+                <% } else if (destination.name === "Tokyo") { %>
+                    <li><strong>Shibuya Crossing</strong> - One of the busiest crossings in the world.</li>
+                    <li><strong>Akihabara</strong> - A hub for anime and tech content.</li>
+                    <li><strong>Roppongi Hills</strong> - Amazing skyline views.</li>
+                <% } else if (destination.name === "Rome") { %>
+                    <li><strong>Colosseum</strong> - A must-have backdrop for history lovers.</li>
+                    <li><strong>Trevi Fountain</strong> - One of the most photogenic spots in Rome.</li>
+                    <li><strong>Piazza Navona</strong> - A lively square full of artistic inspiration.</li>
+                <% } else if (destination.name === "New York") { %>
+                    <li><strong>Times Square</strong> - Bright lights and city energy.</li>
+                    <li><strong>Brooklyn Bridge</strong> - A stunning spot for skyline shots.</li>
+                    <li><strong>Central Park</strong> - Beautiful scenery for all seasons.</li>
+                <% } %>
+            </ul>
+        </section>
+        <!-- Slideshow Section -->
+<section class="slideshow">
+    <h2>Explore <%= destination.name %></h2>
+    <div class="slideshow-container">
+        <% if (destination.name === "Paris") { %>
+            <div class="slide fade"><img src="/images/paris1.jpg" alt="Paris View"></div>
+            <div class="slide fade"><img src="/images/paris2.jpg" alt="Eiffel Tower"></div>
+            <div class="slide fade"><img src="/images/paris3.jpg" alt="Louvre Museum"></div>
+        <% } else if (destination.name === "Tokyo") { %>
+            <div class="slide fade"><img src="/images/tokyo1.jpg" alt="Shibuya Crossing"></div>
+            <div class="slide fade"><img src="/images/tokyo2.jpg" alt="Tokyo Tower"></div>
+            <div class="slide fade"><img src="/images/tokyo3.jpg" alt="Akihabara"></div>
+        <% } else if (destination.name === "Rome") { %>
+            <div class="slide fade"><img src="/images/rome1.jpg" alt="Colosseum"></div>
+            <div class="slide fade"><img src="/images/rome2.jpg" alt="Trevi Fountain"></div>
+            <div class="slide fade"><img src="/images/rome3.jpg" alt="Pantheon"></div>
+        <% } else if (destination.name === "New York") { %>
+            <div class="slide fade"><img src="/images/ny1.jpg" alt="Times Square"></div>
+            <div class="slide fade"><img src="/images/ny2.jpg" alt="Brooklyn Bridge"></div>
+            <div class="slide fade"><img src="/images/ny3.jpg" alt="Central Park"></div>
+        <% } %>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+</section>
+
+    
+        <!-- Gallery Section (Already added) -->
+         <!-- Services Section -->
+<section class="services">
+    <h2>Check Out My Services</h2>
+    <ul>
+        <li><strong>Custom Itinerary Package:</strong> Get a personalized travel plan tailored to your needs.</li>
+        <li><strong>Photographer Recommendation:</strong> Find the best local photographers to capture your moments.</li>
+        <li><strong>Long Stay Guide:</strong> Tips and resources for extended stays in <%= destination.name %>.</li>
+        <li><strong>Kid-Friendly Area Recommendations:</strong> Discover the best places for family-friendly fun.</li>
+    </ul>
+</section>
+    
+        <!-- Back to Home Button -->
+        <div class="back-home">
+            <a href="/" class="btn">Back to Home</a>
+        </div>
+    </main>
+    
+    
+    
+<footer>
+<p>© 2025 Travel App | All Rights Reserved</p>
+</footer>
+<script src="/js/slideshow.js"></script>
+</body>
+</html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Traveling with Desi!</title>
     <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -16,9 +17,27 @@
 <div class="search-container">
     <input type="text" id="searchInput" placeholder="Search destinations..." onkeyup="searchDestinations()">
 </div>
-        <h1>Traveling with Desi !</h1>
+        <h1 class="main-title">Traveling with Desi!</h1>
     </header>
     <main>
+        <div class="slideshow-container home-slideshow">
+            <div class="slide fade">
+            <img src="/images/paris.jpg" alt="Paris">
+            </div>
+            <div class="slide fade">
+            <img src="/images/tokyo.jpg" alt="Tokyo">
+            </div>
+            <div class="slide fade">
+            <img src="/images/newyork.jpg" alt="New York">
+            </div>
+            <div class="slide fade">
+            <img src="/images/rome.jpg" alt="Rome">
+            </div>
+            
+            <!-- Navigation Arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
         <!-- Favorite Places Section -->
 <section class="favorite-places">
     <h2>My Favorite Places I've Been</h2>
@@ -67,5 +86,87 @@
 </section>
     </main>
     <script src="/js/search.js"></script>
+    <script>
+        const modal = document.getElementById("contactModal");
+        const contactLink = document.querySelector('a[href="#contact"]');
+        const closeBtn = document.querySelector(".close");
+        
+        contactLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "block";
+        });
+        
+        closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        });
+        
+        window.addEventListener("click", function (e) {
+        if (e.target == modal) {
+        modal.style.display = "none";
+        }
+        });
+        </script>
+        <!-- Contact Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Let’s Get in Touch!</h2>
+    <p><strong>Desiree J Walker</strong></p>
+    <p>(212) 772-0921</p>
+    <p>Destravels@gmail.com</p>
+    </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("contactModal");
+        const contactLink = document.querySelector('a[href="#contact"]');
+        const closeBtn = document.querySelector(".close");
+        
+        if (contactLink) {
+        contactLink.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "block";
+        });
+        }
+        
+        if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        });
+        }
+        
+        window.addEventListener("click", function (e) {
+        if (e.target === modal) {
+        modal.style.display = "none";
+        }
+        });
+        });
+        </script>
+        <script>
+            let homeSlideIndex = 0;
+            showHomeSlides();
+            
+            function showHomeSlides() {
+            let slides = document.querySelectorAll(".home-slideshow .slide");
+            for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            homeSlideIndex++;
+            if (homeSlideIndex > slides.length) { homeSlideIndex = 1; }
+            slides[homeSlideIndex - 1].style.display = "block";
+            setTimeout(showHomeSlides, 3000); // Change slide every 3 seconds
+            }
+            
+            function changeSlide(n) {
+            homeSlideIndex += n;
+            let slides = document.querySelectorAll(".home-slideshow .slide");
+            if (homeSlideIndex > slides.length) { homeSlideIndex = 1; }
+            if (homeSlideIndex < 1) { homeSlideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+            }
+            slides[homeSlideIndex - 1].style.display = "block";
+            }
+            </script>
 </body>
 </html>

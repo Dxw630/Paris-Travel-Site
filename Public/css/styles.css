@@ -163,6 +163,53 @@ a {
     object-fit: cover;
     border-radius: 10px;
 }
+/* Home Page Slideshow */
+.home-slideshow {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    }
+    
+    .home-slideshow .slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+    }
+    
+    .home-slideshow .slide img {
+    width: 100%;
+    max-height: 500px; /* Adjust height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    }
+    
+    .home-slideshow .prev,
+    .home-slideshow .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    
+    .home-slideshow .prev { left: 10px; }
+    .home-slideshow .next { right: 10px; }
+    
+    .home-slideshow .prev:hover,
+    .home-slideshow .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .home-slideshow .fade {
+    animation: fadeEffect 1.5s ease-in-out;
+    }
+    
 
 /* Navigation Arrows */
 .prev, .next {
@@ -371,3 +418,158 @@ html {
     line-height: 1.6;
     color: #444;
 }
+
+.main-title {
+    margin-left: 40px; /*Adjust this vaule to move it more to the left */
+    text-align: left;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    }
+    
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    }
+    
+    .close:hover {
+    color: black;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.6);
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 400px;
+            border-radius: 10px;
+            text-align: center;
+            }
+            
+            /* Fancy Font for Your Name */
+            .modal-content p strong {
+            font-family: 'Dancing Script', cursive;
+            font-size: 26px;
+            color: #3E5C76;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            }
+            
+        
+        .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+        
+        .close:hover {
+        color: black;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            color: #3E5C76; /* Deep blue, but can be changed */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            }
+
+            .slideshow-container {
+                position: relative;
+                max-width: 100%;
+                margin: auto;
+                }
+                
+                .slide {
+                display: none;
+                width: 100%;
+                text-align: center;
+                }
+                
+                .slide img {
+                width: 100%;
+                max-height: 500px; /* Adjust height as needed */
+                object-fit: cover;
+                border-radius: 10px;
+                }
+                
+                .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 30px;
+                font-weight: bold;
+                padding: 10px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.5);
+                border: none;
+                cursor: pointer;
+                transition: 0.3s;
+                }
+                
+                .prev { left: 10px; }
+                .next { right: 10px; }
+                
+                .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+                }
+                
+                .fade {
+                animation: fadeEffect 1.5s ease-in-out;
+                }
+                
+                @keyframes fadeEffect {
+                from { opacity: 0.4; }
+                to { opacity: 1; }
+                }
+                .paris-description {
+                    font-family: 'Playfair Display', serif; /* Elegant look */
+                    font-size: 20px;
+                    line-height: 1.6;
+                    font-weight: 400;
+                    color: #3E5C76; /* Soft blue for readability */
+                    text-align: justify;
+                    max-width: 80%;
+                    margin: auto;
+                    }
+        
+
+    

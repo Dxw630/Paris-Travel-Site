@@ -18,6 +18,27 @@
         <h1>Welcome to <%= destination.name %></h1>
         <img src="/images/<%= destination.image %>" alt="<%= destination.name %>" class="destination-image">
         <p><%= destination.description %></p>
+        <% if (destination.name === "Paris") { %>
+        <p class="paris-description">
+            Paris is a dream destination for both singles and couples. From romantic walks along the Seine to solo cafe adventures in Montmare, the city has a vibe for everyone. It's filled with charming streets, breathtaking art, and unforgettable wine. Whether you're falling in love or falling in love with yourself, Paris delivers. This magical city makes every moment feel cinematic.
+        </p>
+      <% } %>
+      <% if (destination.name === "Tokyo") { %>
+        <p class="paris-description">
+        Tokyo is a vibrant fusion of tradition and technology. From peaceful temple strolls to neon-lit nights in Shibuya, the city offers experiences for both introspective solo travelers and adventurous couples. Its culture, cuisine, and fashion scenes are unmatched. Whether you’re sipping matcha in a serene garden or exploring a bustling anime district, Tokyo surprises you at every turn. It’s a place where ancient beauty meets futuristic dreams.
+        </p>
+        <% } %>
+        <% if (destination.name === "Rome") { %>
+            <p class="paris-description">
+            Rome is a timeless escape where history and romance are always alive. Couples can stroll hand-in-hand through cobbled streets, while solo travelers lose themselves in ancient ruins and espresso bars. Every corner tells a story—whether it’s whispered by the Colosseum or sung by a street violinist in Trastevere. With candlelit pasta dinners and golden-hour fountains, the city creates its own kind of magic. Rome doesn’t just welcome you—it romances you.
+            </p>
+            <% } %>
+            <% if (destination.name === "New York") { %>
+                <p class="paris-description">
+                New York is energy, ambition, and beauty all packed into one unforgettable skyline. For couples, it's rooftop views and Central Park kisses; for singles, it’s late-night diners, galleries, and the thrill of being alone but never lonely. Every block buzzes with possibility, creativity, and life. Whether you’re catching a Broadway show or wandering through SoHo, the city makes you feel unstoppable. New York isn’t just a place—it’s a pulse.
+                </p>
+                <% } %>
+        
     
         <!-- Best Places for Dinner Section -->
         <section class="dinner">
